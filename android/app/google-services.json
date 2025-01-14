@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "197231827679",
+    "project_id": "authtutorial-cc98a",
+    "storage_bucket": "authtutorial-cc98a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197231827679:android:c651630c6e3c837b3fe76a",
+        "android_client_info": {
+          "package_name": "com.chatify.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYuBGpW_hpV-GI5bk-X7949frbGjyq-Us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
