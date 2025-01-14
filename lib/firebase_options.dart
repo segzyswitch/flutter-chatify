@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,44 +41,44 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDDQXwA1MxCR2USn5UQ1Y9kPP2wLQoCx_U',
-    appId: '1:197231827679:web:b056edb2ebc118093fe76a',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['WEB_APIKEY']!,
+    appId: dotenv.env['WEB_APPID']!,
     messagingSenderId: '197231827679',
     projectId: 'authtutorial-cc98a',
     authDomain: 'authtutorial-cc98a.firebaseapp.com',
     storageBucket: 'authtutorial-cc98a.firebasestorage.app',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCYuBGpW_hpV-GI5bk-X7949frbGjyq-Us',
-    appId: '1:197231827679:android:c651630c6e3c837b3fe76a',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['APK_APIKEY']!,
+    appId: dotenv.env['APK_APPID']!,
     messagingSenderId: '197231827679',
     projectId: 'authtutorial-cc98a',
     storageBucket: 'authtutorial-cc98a.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAtzme638Y7T09NweatOPywjxOqUvRLOtY',
-    appId: '1:197231827679:ios:9065ef5a5978dd6b3fe76a',
-    messagingSenderId: '197231827679',
-    projectId: 'authtutorial-cc98a',
-    storageBucket: 'authtutorial-cc98a.firebasestorage.app',
-    iosBundleId: 'com.example.chatify',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAtzme638Y7T09NweatOPywjxOqUvRLOtY',
-    appId: '1:197231827679:ios:9065ef5a5978dd6b3fe76a',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['IOS_APIKEY']!,
+    appId: dotenv.env['IOS_APPID']!,
     messagingSenderId: '197231827679',
     projectId: 'authtutorial-cc98a',
     storageBucket: 'authtutorial-cc98a.firebasestorage.app',
     iosBundleId: 'com.example.chatify',
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDDQXwA1MxCR2USn5UQ1Y9kPP2wLQoCx_U',
-    appId: '1:197231827679:web:f37cb595072952d63fe76a',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['MAC_APIKEY']!,
+    appId: dotenv.env['MAC_APPID']!,
+    messagingSenderId: '197231827679',
+    projectId: 'authtutorial-cc98a',
+    storageBucket: 'authtutorial-cc98a.firebasestorage.app',
+    iosBundleId: 'com.example.chatify',
+  );
+
+  static FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['WIN_APIKEY']!,
+    appId: dotenv.env['WIN_APPID']!,
     messagingSenderId: '197231827679',
     projectId: 'authtutorial-cc98a',
     authDomain: 'authtutorial-cc98a.firebaseapp.com',
